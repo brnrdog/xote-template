@@ -234,17 +234,17 @@ let make = () => {
   let decrement = (_: Dom.event) => Signal.update(count, n => n - 1)
   let increment = (_: Dom.event) => Signal.update(count, n => n + 1)
 
-  <div className="flex items-center gap-3 p-6">
+  <div class="flex items-center gap-3 p-6">
     <button
-      className="px-3 py-1 rounded bg-slate-900 text-white hover:bg-slate-700"
+      class="px-3 py-1 rounded bg-slate-900 text-white hover:bg-slate-700"
       onClick={decrement}>
       {View.text("-")}
     </button>
-    <span className="font-mono text-xl tabular-nums">
+    <span class="font-mono text-xl tabular-nums">
       {View.signalText(() => Signal.get(count)->Int.toString)}
     </span>
     <button
-      className="px-3 py-1 rounded bg-slate-900 text-white hover:bg-slate-700"
+      class="px-3 py-1 rounded bg-slate-900 text-white hover:bg-slate-700"
       onClick={increment}>
       {View.text("+")}
     </button>
@@ -480,17 +480,17 @@ let make = () => {
   let decrement = (_: Dom.event) => Signal.update(count, n => n - 1)
   let increment = (_: Dom.event) => Signal.update(count, n => n + 1)
 
-  <div className="flex items-center gap-3 p-6">
+  <div class="flex items-center gap-3 p-6">
     <button
-      className="px-3 py-1 rounded bg-slate-900 text-white hover:bg-slate-700"
+      class="px-3 py-1 rounded bg-slate-900 text-white hover:bg-slate-700"
       onClick={decrement}>
       {View.text("-")}
     </button>
-    <span className="font-mono text-xl tabular-nums">
+    <span class="font-mono text-xl tabular-nums">
       {View.signalText(() => Signal.get(count)->Int.toString)}
     </span>
     <button
-      className="px-3 py-1 rounded bg-slate-900 text-white hover:bg-slate-700"
+      class="px-3 py-1 rounded bg-slate-900 text-white hover:bg-slate-700"
       onClick={increment}>
       {View.text("+")}
     </button>
@@ -598,7 +598,7 @@ async function createProdHandler() {
   const templatePath = path.join(clientDir, "index.html");
   const template = fs.readFileSync(templatePath, "utf-8");
   const { render } = await import(
-    path.join(__dirname, "dist/server/Server.res.mjs")
+    path.join(__dirname, "dist/server/Server.res.js")
   );
 
   const mime = {
@@ -706,7 +706,7 @@ Run:
 npm run build
 ```
 
-Expected: exits 0. `dist/client/index.html` and `dist/server/Server.res.mjs` both exist.
+Expected: exits 0. `dist/client/index.html` and `dist/server/Server.res.js` both exist.
 
 - [ ] **Step 5: Smoke-test the production server**
 

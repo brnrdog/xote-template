@@ -47,7 +47,7 @@ async function createProdHandler() {
   const templatePath = path.join(clientDir, "index.html");
   const template = fs.readFileSync(templatePath, "utf-8");
   const { render } = await import(
-    path.join(__dirname, "dist/server/Server.res.mjs")
+    path.join(__dirname, "dist/server/Server.res.js")
   );
 
   const mime = {

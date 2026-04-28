@@ -1,1 +1,1 @@
-let view = () => <Counter />
+let view = () => <Page />

@@ -1,3 +1,3 @@
 %%raw(`import "./styles.css"`)
 
-View.mountById(<Counter />, "app")
+View.mountById(<Page />, "app")

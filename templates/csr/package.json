@@ -1,0 +1,24 @@
+{
+  "name": "xote-csr-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "res:dev": "rescript -w",
+    "res:build": "rescript",
+    "res:clean": "rescript clean"
+  },
+  "dependencies": {
+    "rescript-signals": "^3.1.0",
+    "xote": "^6.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "rescript": "^12.0.0-beta.1",
+    "tailwindcss": "^4.0.0",
+    "vite": "^7.0.0"
+  }
+}
